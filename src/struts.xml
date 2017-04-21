@@ -16,7 +16,23 @@
     <action name="hello" class="utn.frd.action.HelloWorldAction" method="execute">
       <result name="success">/HelloWorld.jsp</result>
     </action>
-   
+    <action name="save" class="utn.frd.action.PersonaAction"
+    	method="save">
+    	<result name="error">/personas.jsp</result>
+    	<result name="success">/personas.jsp</result>
+    </action>
+    <action name="execute" class="utn.frd.action.PersonaAction" method="execute">
+         <result name="success">/listaPersonas.jsp</result>
+    </action>
+     <action name="eliminar" class="utn.frd.action.PersonaAction" method="eliminar">
+         <result name="success">/eliminarP.jsp</result>
+         <result name="error">/eliminarP.jsp</result>
+    </action>
+    <action name="modificar" class="utn.frd.action.PersonaAction" method="modificar">
+         <result name="success">/modificarP.jsp</result>
+         <result name="error">/modificarP.jsp</result>
+    </action>
+
     </package>
  
 </struts>

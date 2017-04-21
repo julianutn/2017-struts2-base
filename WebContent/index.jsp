@@ -12,11 +12,31 @@
 </head>
 <body>
 	<!-- Aca empieza lo que se va a mostrar en la pagina -->
-	<h1>Welcome To Struts 2!</h1>
+	<h1>ABM</h1>
 	<p>
 		<!-- este es un link al action "hello" que está definido en el struts.xml -->
-		<a href="<s:url action='hello'/>">Ejecutar el action (utn.frd.action.HelloWorldAction -> metodo execute)</a>
-		Esta regla está definida en el archivo struts.xml
+		<a href="<s:url action='save'/>">Alta</a>
+		
+		
 	</p>
+	<p>
+		<!-- este es un link al action "hello" que está definido en el struts.xml -->
+		<a href="<s:url action='execute'/>">Lista </a>
+		
+		
+	</p>
+	<p>
+		<!-- este es un link al action "hello" que está definido en el struts.xml -->
+		<a href="<s:url action='eliminar'/>">Baja</a>
+	
+		
+	</p>
+	<p>
+		<!-- este es un link al action "hello" que está definido en el struts.xml -->
+		<a href="<s:url action='modificar'/>">Modificar</a>
+	
+		
+	</p>
+
 </body>
 </html>

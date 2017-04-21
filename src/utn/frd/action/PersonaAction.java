@@ -34,10 +34,9 @@ public class PersonaAction extends ActionSupport{
 	public String execute(){
 		List<Persona> personas1 = PersistentManager.getInstance();
 		ArrayList<Persona> personasTrue = new ArrayList<Persona>();
-		for(int i = 0; i < personas1.size();i++) {
-			Persona per = personas1.get(i);
-			if (per.getAlta() == true) {
-				personasTrue.add(per);
+		for(Persona p:personas1) {
+			if (p.getAlta()) {
+				personasTrue.add(p);
 			}	
 		}
 		personas=personasTrue;
@@ -53,8 +52,7 @@ public class PersonaAction extends ActionSupport{
 			addActionError("Ocurrió un error con el ID");
 			return ERROR;
 		}
-		for(int i = 0; i < personas.size();i++) {
-			Persona p = PersistentManager.getInstance().get(i);
+		for(Persona p:personas) {
 			if (p.getId() == ide) {
 				p.setAlta(false);
 			}
@@ -73,8 +71,8 @@ public class PersonaAction extends ActionSupport{
 			return ERROR;
 		}
 		
-		for(int i = 0; i < personas.size();i++) {
-			Persona p = PersistentManager.getInstance().get(i);
+		for(Persona p:personas) {
+			
 			if (p.getId() == ide) {
 				if (!(name.equals(""))) {
 					p.setName(name);
